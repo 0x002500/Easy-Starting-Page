@@ -6,6 +6,8 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.3s;
+    
 }
 
 /* Dark mode */
@@ -15,7 +17,7 @@ html {
 }
 
 .card {
-    background-color: #fff;
+    background-color: #d7d7d7;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
         0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: flex;
@@ -26,7 +28,6 @@ html {
     height: 70vh;
 }
 
-/* Dark mode */
 .dark-theme .card {
     background-color: #555;
 }
@@ -35,6 +36,14 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.title{
+    font-weight: 100;
+    font-size: 5em;
+    color: #343434;
+}
+.dark-theme .title{
+    color: #d7d7d7;
 }
 
 .input-field input[type="search"] {
@@ -51,23 +60,24 @@ html {
 .btn {
     background-color: #007aff;
     padding: 20px 40px;
-    /* increased padding */
     border-radius: 5px;
     color: #ffffff;
     text-decoration: none;
     margin: 20px;
-    /* increased margin */
     font-size: 24px;
-    /* increased fontsize */
+    transition: background-color 0.4s;
 }
 
 .btn:hover {
-    background-color: #005cb2;
+    background-color: #094883;
 }
 
 /* Dark mode */
-.dark-theme .btn {
+.btn .dark-theme{
     background-color: #005cb2;
+}
+.search-buttons{
+    display: flex;
 }
 
 #toggleTheme {
@@ -75,7 +85,6 @@ html {
     top: 5px;
     right: 5px;
     padding: 10px 20px;
-    /* decreased padding */
     font-size: 16px;
-    /* decreased font size */
+    border: none;
 }
