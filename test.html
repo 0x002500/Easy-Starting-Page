@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Easy Starting Page</title>
+  <link rel="stylesheet" href="./Roboto-Medium.ttf" />
+  <style>
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      font-family: "Roboto", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Dark mode */
+    .dark-theme {
+      background-color: #333;
+      color: #ffffff;
+    }
+
+    .card {
+      background-color: #fff;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      display: flex;
+      flex-direction: column;
+      padding: 50px;
+      border-radius: 10px;
+      width: 70vw;
+      height: 70vh;
+    }
+
+    /* Dark mode */
+    .dark-theme .card {
+      background-color: #555;
+    }
+
+    .card .card-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .input-field input[type="search"] {
+      padding: 20px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 30px;
+      width: calc(100% - 5px);
+      /* Adjusted width */
+      font-size: 24px;
+      /* Unchanged font size */
+    }
+
+    .btn {
+      background-color: #007aff;
+      padding: 20px 40px;
+      /* increased padding */
+      border-radius: 5px;
+      color: #ffffff;
+      text-decoration: none;
+      margin: 20px;
+      /* increased margin */
+      font-size: 24px;
+      /* increased fontsize */
+    }
+
+    .btn:hover {
+      background-color: #005cb2;
+    }
+
+    /* Dark mode */
+    .dark-theme .btn {
+      background-color: #005cb2;
+    }
+
+    #toggleTheme {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      padding: 10px 20px;
+      /* decreased padding */
+      font-size: 16px;
+      /* decreased font size */
+    }
+  </style>
+  <meta charset="UTF-8" />
+  <meta name="description" content="easy starting page" />
+  <meta name="keywords" content="starting page, 浏览器起始页" />
+  <meta name="author" content="0x0025" />
+</head>
+
+<body id="body" class="dark-theme">
+  <div class="card">
+    <div class="card-content">
+      <h1>Easy Starting Page</h1>
+      <div class="input-field">
+        <input type="search" id="search-bar" placeholder="Type here..." />
+      </div>
+      <div class="search-buttons">
+        <a class="btn" id="search-google">Google</a>
+        <a class="btn" id="search-bing">Bing</a>
+        <a class="btn" id="search-duckduckgo">DuckDuckGo</a>
+        <a class="btn" id="search-baidu">Baidu</a>
+      </div>
+    </div>
+  </div>
+  <button id="toggleTheme" class="btn">Toggle Theme</button>
+  <script>
+    const buttons = {
+      google: document.getElementById("search-google"),
+      bing: document.getElementById("search-bing"),
+      duckduckgo: document.getElementById("search-duckduckgo"),
+      baidu: document.getElementById("search-baidu"),
+    };
+
+    const engines = {
+      google: "https://www.google.com/search?q=",
+      bing: "https://www.bing.com/search?q=",
+      duckduckgo: "https://duckduckgo.com/?q=",
+      baidu: "https://www.baidu.com/s?wd=",
+    };
+
+    Object.keys(buttons).forEach((key) => {
+      buttons[key].addEventListener("click", function () {
+        var query = document.getElementById("search-bar").value;
+        if (query) {
+          window.open(engines[key] + query);
+        }
+      });
+    });
+
+    document.getElementById("toggleTheme").onclick = function () {
+      var body = document.body;
+      if (body.classList.contains('dark-theme')) {
+          body.classList.remove('dark-theme');
+          body.classList.add('light-theme');
+      } else {
+          body.classList.remove('light-theme');
+          body.classList.add('dark-theme');
+      }
+    };
+  </script>
+</body>
+</html>
