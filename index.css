@@ -7,7 +7,6 @@ html {
     justify-content: center;
     align-items: center;
     transition: background-color 0.3s;
-    
 }
 
 /* Dark mode */
@@ -18,8 +17,7 @@ html {
 
 .card {
     background-color: #d7d7d7;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: flex;
     flex-direction: column;
     padding: 50px;
@@ -37,12 +35,14 @@ html {
     flex-direction: column;
     align-items: center;
 }
-.title{
+
+.title {
     font-weight: 100;
     font-size: 5em;
     color: #343434;
 }
-.dark-theme .title{
+
+.dark-theme .title {
     color: #d7d7d7;
 }
 
@@ -73,10 +73,11 @@ html {
 }
 
 /* Dark mode */
-.btn .dark-theme{
+.btn .dark-theme {
     background-color: #005cb2;
 }
-.search-buttons{
+
+.search-buttons {
     display: flex;
 }
 

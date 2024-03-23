@@ -31,3 +31,11 @@ document.getElementById("toggleTheme").onclick = function () {
         body.classList.add("dark-theme");
     }
 };
+
+fetch("https://v1.hitokoto.cn")
+    .then((response) => response.json())
+    .then((data) => {
+        const hitokoto = document.querySelector("#hitokoto_text");
+        hitokoto.innerText = data.hitokoto;
+    })
+    .catch(console.error);
