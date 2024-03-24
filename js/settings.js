@@ -14,8 +14,8 @@ window.onload = function() {
         repoList.appendChild(listItem);
     }
 };
-const addRepoForm = document.getElementById('addRepoForm');
-addRepoForm.addEventListener('submit', function(event) {
+const updateCode = document.getElementById('updateCode');
+updateCode.addEventListener('submit', function(event) {
     event.preventDefault();
     const ownerInput = document.getElementById('ownerInput');
     const repoInput = document.getElementById('repoInput');

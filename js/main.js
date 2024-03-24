@@ -43,7 +43,6 @@ function search(){
             }
             break;
         case 2:
-            console.log(2);
             if (query) {
                 window.open("https://www.baidu.com/s?wd=" + query.value);
             }

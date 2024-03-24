@@ -1,55 +1,77 @@
-<head>
-    <link href="main.css" rel="stylesheet" type="text/css">
-    <link href="settings.css" rel="stylesheet" type="text/css">
-</head>
-<body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="./css/main.css" rel="stylesheet" type="text/css" />
+    <link href="./css/settings.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body class="dark">
     <dialog class="settings" id="settings">
-        <span class="close-button" onclick="setSettings(false)">✖</span>
-        <h1>设置</h1>
-        <h2>Github仓库列表</h2>
-        <ul class="repo-list" id="repoList">
-        </ul>
-        <h2>添加想要追踪的Github仓库</h2>
-        <form id="addRepoForm">
-            <label for="ownerInput">Owner:</label>
-            <input type="text" id="ownerInput" name="ownerInput" required>
-            <label for="repoInput">Repository:</label>
-            <input type="text" id="repoInput" name="repoInput" required>
-            <button type="submit">Add</button>
-        </form>
+      <span class="close-button" onclick="setSettings(false)">✖</span>
+      <h1>设置</h1>
+      <h2>自定义卡片代码</h2>
+      <h2>编辑代码</h2>
+      <form id="updateCode">
+        <input type="text" id="code" name="code" required autocomplete="off" />
+        <button type="submit">Save</button>
+      </form>
     </dialog>
-    <h1 class="logo">Dark-Gray</h1>
+    <h1 class="logo">Easy Starting Page</h1>
     <div class="content">
-        <button class="themebtn" onclick="toggleTheme()">
-            <img src="static/dark.svg">
-        </button>
-        <button class="settingsbtn" onclick="setSettings(true)">
-            <img src="static/settings_dark.svg">
-        </button>
-        <div class="search">
-            <img class="search-icon" src="static/seach.svg" onclick="search()">
-            <input class="searchinput" id="query" type="text" placeholder="search" onkeydown="handleKeyDown(event)">
-        </div> 
-        <div class="panelFather">
-            <div class="panel engineFather">
-                <h2>Using Search_Engine</h2>
-                <button class="engines" id="googleBtn" onclick="switchEngine('Google')">Google</button>
-                <button class="engines" id="bingBtn" onclick="switchEngine('Bing')">Bing</button>
-                <button class="engines" id="baiduBtn" onclick="switchEngine('Baidu')">Baidu</button>
-            </div>
-            <div class="panel weather">
-                <h2>Weather_Forecast</h2>
-                <span style="display: flex;flex-direction: row;"><img src="static/location.svg" id="weathericon" class="weathericon"><p class="weather-loc" id="weather-loc">--</p></span>
-                <p class="weather-deg" id="weather-deg">--°C</p>
-                <p class="weather-stat" id="weather-stat">--</p>
-            </div>
-            <div class="panel github" id="githubRepo">
-                <h2>Github_Repositories</h2>
-            </div>
+      <button class="themebtn" onclick="toggleTheme()">
+        <img src="static/dark.svg" />
+      </button>
+      <button class="settingsbtn" onclick="setSettings(true)">
+        <img src="static/settings_dark.svg" />
+      </button>
+      <div class="search">
+        <img class="search-icon" src="static/seach.svg" onclick="search()" />
+        <input
+          class="searchinput"
+          id="query"
+          type="text"
+          placeholder="search"
+          onkeydown="handleKeyDown(event)"
+          autocomplete="off"
+        />
+      </div>
+      <div class="panelFather">
+        <div class="panel engineFather">
+          <h2>Using Search_Engine</h2>
+          <button
+            class="engines"
+            id="googleBtn"
+            onclick="switchEngine('Google')"
+          >
+            Google
+          </button>
+          <button class="engines" id="bingBtn" onclick="switchEngine('Bing')">
+            Bing
+          </button>
+          <button class="engines" id="baiduBtn" onclick="switchEngine('Baidu')">
+            Baidu
+          </button>
         </div>
+        <div class="panel weather">
+          <h2>Weather_Forecast</h2>
+          <span style="display: flex; flex-direction: row"
+            ><img
+              src="static/location.svg"
+              id="weathericon"
+              class="weathericon"
+            />
+            <p class="weather-loc" id="weather-loc">--</p>
+          </span>
+          <p class="weather-deg" id="weather-deg">--°C</p>
+          <p class="weather-stat" id="weather-stat">--</p>
+        </div>
+        <div class="panel github" id="githubRepo">
+          <h2>Customize Card</h2>
+        </div>
+      </div>
     </div>
-    <script src="main.js"></script>
-    <script src="weather.js"></script>
-    <script src="github.js"></script>
-    <script src="settings.js"></script>
-</body>
+    <script src="./js/main.js"></script>
+    <script src="./js/weather.js"></script>
+    <script src="./js/settings.js"></script>
+  </body>
+</html>
