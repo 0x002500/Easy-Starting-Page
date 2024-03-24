@@ -1,5 +1,5 @@
 *{
-    font-family: Roboto-Medium;
+    font-family: raleway;
     color: #595959;
 }
 .logo{
@@ -41,6 +41,7 @@ body {
     width: 45vw;
     padding: 30px;
     margin: auto;
+    margin-bottom: 40px;
     position: relative;
     display: inline-block;
     border: 2px solid #595959;
@@ -70,7 +71,7 @@ body {
     border: 3px solid #595959;
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin:auto;
 }
 .panelFather{
     display: flex;
@@ -109,6 +110,9 @@ body {
 .dark .weather-stat {
     color: rgb(231, 231, 231);
 }
+.dark .weather-loc{ 
+    color: #c3c3c3;
+}
 .dark .engines {
     color: rgb(231, 231, 231);
 }
@@ -124,6 +128,12 @@ body {
 .dark .themebtn{
     background-color: #292929;
 }
+.dark .settingsbtn{
+    background-color: #292929;
+}
+.dark .repo-details p{
+    color: #f3f2f2;
+}
 .themebtn{
     position: absolute;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -133,4 +143,82 @@ body {
     top: 8vh;
     border: none;
     border-radius: 50%;
+}
+.settingsbtn{
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 4em;
+    width: 4em;
+    left: 4vw;
+    top: 16vh;
+    border: none;
+    border-radius: 50%;
+}
+.repo-details p{
+    color: #292929;
+}
+.settings {
+    border-radius: 30px;
+    z-index: 99999;
+    width: 70vw;
+    height: 65vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f3f2f2;
+    padding-left: 80px;
+}
+
+.settings h2{
+    color:#292929;
+}
+.settings h1{
+   color:#292929;
+}
+.settings ul,li{
+    color:#292929;
+}
+.settings label{
+    color:#292929;
+}
+.settings button{
+    border-radius: 25px;
+    padding: 5px;
+    border: 2px solid #9f9f9f;
+}
+.settings input{
+	background:none;  
+	outline:none;  
+    padding: 5px;
+    border: none;
+    border-bottom:1px solid #c3c3c3;
+    background-color: #ffffff;
+}
+.settings input:focus{
+    border-bottom:3px solid #c3c3c3;
+}
+.close-button{
+    font-size: 40px;
+}
+.dark .settings{
+    background-color: #292929;
+}
+.dark .settings h1{
+    color: #c3c3c3;
+}
+.dark .settings h2{
+    color: #c3c3c3;
+}
+.dark .settings ul{
+    color: #c3c3c3;
+}
+.dark .settings li{
+    color: #c3c3c3;
+}
+.dark .settings label{ 
+    color: #c3c3c3;
+}
+.weathericon{
+    max-width: 20px;
 }

@@ -60,12 +60,23 @@ function handleKeyDown(event) {
 function toggleTheme() {
     var body = document.body;
     var themeButton = document.querySelector(".themebtn img");
-    
+    var settingsButton = document.querySelector(".settingsbtn img");
+    var weatherIcon = document.getElementById("weathericon");
     if (body.classList.contains("dark")) {
         body.classList.remove("dark");
         themeButton.src = "static/light.svg";
+        settingsButton.src="static/settings.svg";
+        weatherIcon.src="static/location.svg";
     } else {
         body.classList.add("dark");
         themeButton.src = "static/dark.svg";
+        settingsButton.src="static/settings_dark.svg"
+        weatherIcon.src="static/location_dark.svg";
+    }
+}
+function settings() {
+    const dialog = document.getElementById('settings');
+    if (dialog) {
+        dialog.showModal();
     }
 }
