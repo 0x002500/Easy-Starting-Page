@@ -12,18 +12,25 @@
     <h1 class="logo">Dark-Gray</h1>
     <div class="content">
         <button class="themebtn" onclick="toggleTheme()">
-            <img src="static/dark.svg">
+            <img src="static/dark.svg" />
         </button>
         <div class="search">
-            <img class="search-icon" src="static/seach.svg" onclick="search()">
-            <input class="searchinput" id="query" type="text" placeholder="search" onkeydown="handleKeyDown(event)" autocomplete="off">
-        </div> 
+            <img class="search-icon" src="static/seach.svg" onclick="search()" />
+            <input class="searchinput" id="query" type="text" placeholder="search" onkeydown="handleKeyDown(event)"
+                autocomplete="off" />
+        </div>
         <div class="panelFather">
             <div class="panel engineFather">
                 <h2>Using Search_Engine</h2>
-                <button class="engines" id="googleBtn" onclick="switchEngine('Google')">Google</button>
-                <button class="engines" id="bingBtn" onclick="switchEngine('Bing')">Bing</button>
-                <button class="engines" id="baiduBtn" onclick="switchEngine('Baidu')">Baidu</button>
+                <button class="engines" id="googleBtn" onclick="switchEngine('Google')">
+                    Google
+                </button>
+                <button class="engines" id="bingBtn" onclick="switchEngine('Bing')">
+                    Bing
+                </button>
+                <button class="engines" id="baiduBtn" onclick="switchEngine('Baidu')">
+                    Baidu
+                </button>
             </div>
             <div class="panel weather">
                 <h2>Weather_Forecast</h2>
@@ -35,8 +42,8 @@
             </div>
         </div>
     </div>
-    <script src="index.js"></script>
-    <script src="weather.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/weather.js"></script>
 </body>
 
 </html>
