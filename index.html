@@ -6,37 +6,37 @@
     <link rel="stylesheet" href="./Roboto-Medium.ttf" />
     <link rel="stylesheet" href="./index.css" />
     <meta charset="UTF-8" />
-    <meta name="description" content="easy starting page" />
-    <meta name="keywords" content="starting page, 浏览器起始页" />
-    <meta name="author" content="0x0025" />
 </head>
 
-<body id="body" class="dark-theme">
-    <div class="card">
-        <div class="card-content">
-            <h1 class="title">Easy Starting Page</h1>
-            <div class="input-field">
-                <input type="search" id="search-bar" placeholder="Search here..." />
+<body class="dark">
+    <h1 class="logo">Dark-Gray</h1>
+    <div class="content">
+        <button class="themebtn" onclick="toggleTheme()">
+            <img src="static/dark.svg">
+        </button>
+        <div class="search">
+            <img class="search-icon" src="static/seach.svg" onclick="search()">
+            <input class="searchinput" id="query" type="text" placeholder="search" onkeydown="handleKeyDown(event)" autocomplete="off">
+        </div> 
+        <div class="panelFather">
+            <div class="panel engineFather">
+                <h2>Using Search_Engine</h2>
+                <button class="engines" id="googleBtn" onclick="switchEngine('Google')">Google</button>
+                <button class="engines" id="bingBtn" onclick="switchEngine('Bing')">Bing</button>
+                <button class="engines" id="baiduBtn" onclick="switchEngine('Baidu')">Baidu</button>
             </div>
-            <div class="search-buttons">
-                <a class="btn" id="search-bing">Bing</a>
-                <a class="btn" id="search-google">Google</a>
-                <a class="btn" id="search-baidu">Baidu</a>
-                <a class="btn" id="search-duckduckgo">DuckDuckGo</a>
+            <div class="panel weather">
+                <h2>Weather_Forecast</h2>
+                <p class="weather-deg" id="weather-deg">--°C</p>
+                <p class="weather-stat" id="weather-stat">--</p>
             </div>
-            <div>
-                <h3 id="hitokoto_text"></h3>
-            </div>
-            <div>
-                <h3>
-                    Find source code at
-                    <a href="https://github.com/0x002500/Easy-Starting-Page" target="_blank">Github Repo</a>
-                </h3>
+            <div class="panel github">
+                <h2>Github_Repositories</h2>
             </div>
         </div>
     </div>
-    <button id="toggleTheme" class="btn">Toggle Theme</button>
-    <script src="./index.js"></script>
+    <script src="index.js"></script>
+    <script src="weather.js"></script>
 </body>
 
 </html>

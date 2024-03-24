@@ -2,17 +2,20 @@
 
 ## ✨Features
 - Full of native html, without any framework
-- Quickly loading time
+- Fast loading time
 - Use Material Design
 - With light mode and dark mode
 
 ## How to use
 
 ### Plan 1
-#### Visit my demo website: [Demo](https://esp.0x0025.eu.org).
+#### Visit my demo site: [Demo](https://esp.0x0025.eu.org).
 
 ### Plan 2
-#### Delyop by yourself
+#### Deploy by yourself
 
 ## Licence
-### This project is under the GPLv3 licence
+### This project is released under the GPLv3 licence
+
+## Thanks
+### [glowingstone124/Dark-Gray](https://github.com/glowingstone124/Dark-Gray) This project provides the basic UI and logic
