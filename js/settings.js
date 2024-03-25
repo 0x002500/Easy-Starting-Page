@@ -1,23 +1,23 @@
-window.onload = function() {
-    var code = localStorage.getItem("code");
-    var show = document.getElementById("show");
-    show.innerHTML(code);
+window.onload = function () {
+  var code = localStorage.getItem("code");
+  var show = document.getElementById("show");
+  show.innerHTML(code);
 };
-const updateCode = document.getElementById('updateCode');
-updateCode.addEventListener('submit', function(event) {
-    event.preventDefault();
-    const code = document.getElementById('code');
-    localStorage.removeItem("code");
-    localStorage.setItem("code", code);
+const updateCode = document.getElementById("updateCode");
+updateCode.addEventListener("submit", function (event) {
+  event.preventDefault();
+  const code = document.getElementById("code");
+  localStorage.removeItem("code");
+  localStorage.setItem("code", code);
 });
 
 function setSettings(option) {
-    const dialog = document.querySelector('.settings');
-    if (dialog) {
-        if (option){
-            dialog.showModal();
-        } else {
-            dialog.close();
-        }
+  const dialog = document.querySelector(".settings");
+  if (dialog) {
+    if (option) {
+      dialog.showModal();
+    } else {
+      dialog.close();
     }
+  }
 }
