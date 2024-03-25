@@ -1,14 +1,14 @@
 window.onload = function () {
-  var code = localStorage.getItem("code");
-  var show = document.getElementById("show");
-  show.innerHTML(code);
+  const code = localStorage.getItem("code");
+  const show = document.getElementById("show");
+  show.innerHTML = code;
 };
 const updateCode = document.getElementById("updateCode");
 updateCode.addEventListener("submit", function (event) {
   event.preventDefault();
   const code = document.getElementById("code");
   localStorage.removeItem("code");
-  localStorage.setItem("code", code);
+  localStorage.setItem("code", code.ariaValueMax.trim());
 });
 
 function setSettings(option) {
