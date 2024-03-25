@@ -8,7 +8,8 @@ updateCode.addEventListener("submit", function (event) {
   event.preventDefault();
   const code = document.getElementById("code");
   localStorage.removeItem("code");
-  localStorage.setItem("code", code.ariaValueMax.trim());
+  localStorage.setItem("code", code.value.trim());
+  alert("Alredy set, reload the page to view.");
 });
 
 function setSettings(option) {
