@@ -4,7 +4,8 @@ window.addEventListener("load", () => {
       (position) => {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
-        const weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=d22226c7401b13e8b4f4cddd7b3051db`;
+        const key = process.env.appid
+        const weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${appid}`;
 
         fetch(weatherApiUrl)
           .then((response) => response.json())
