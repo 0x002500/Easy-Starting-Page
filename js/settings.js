@@ -3,6 +3,7 @@ window.onload = function () {
   const show = document.getElementById("show");
   show.innerHTML = code;
 };
+
 const updateCode = document.getElementById("updateCode");
 updateCode.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -20,5 +21,12 @@ function setSettings(option) {
     } else {
       dialog.close();
     }
+  }
+}
+
+function settings() {
+  const dialog = document.getElementById("settings");
+  if (dialog) {
+    dialog.showModal();
   }
 }
