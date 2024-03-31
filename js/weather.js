@@ -5,16 +5,15 @@ window.addEventListener("load", () => {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
         const key = process.env.APPID
-        const weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
+        const weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=d22226c7401b13e8b4f4cddd7b3051db`;
 
         fetch(weatherApiUrl)
           .then((response) => response.json())
           .then((data) => {
             const cityName = data.name;
+            const temp = (data.main.temp - 273.15).toFixed(1)
             document.getElementById("weather-loc").textContent = `${cityName}`;
-            document.getElementById("weather-deg").textContent = `${(
-              data.main.temp - 273.15
-            ).toFixed(1)}°C`;
+            document.getElementById("weather-deg").textContent = `${temp}°C`;
             document.getElementById(
               "weather-stat"
             ).textContent = `${data.weather[0].description}`;
